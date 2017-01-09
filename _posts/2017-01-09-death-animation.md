@@ -6,13 +6,13 @@ If you haven't already, add a Zombunny to your game's Hierarchy.
 
 Click on the Zombunny and check it out in the Inspector on the right.
 
-![Inspector view]({{ site.url }}/img/2017-01-09/zombunny.png)
+![Inspector view](http://i.imgur.com/SiyF883.png)
 
 What we're interested in is the "Animator" section. Particularly, the Controller. Here we can see that the controller is an "EnemyAnimatorController".
 
 This is something we imported from the demo, and we can have a look at it. Go into the Project view, open the \_CompletedAssets folder, and inside that open the Animation folder.
 
-![Animation Controllers]({{ site.url }}/img/2017-01-09/animation_controllers.png)
+![Animation Controllers](http://i.imgur.com/ItKgFGc.png)
 
 Here you'll find the different objects for animation. Let's double click on the EnemyAnimatorController.
 
@@ -22,7 +22,7 @@ Don't worry! The Scene editing view isn't gone. You can see it's now changed int
 
 Let's go over what we see here:
 
-![Animator view]({{ site.url }}/img/2017-01-09/animation_controller_view.png)
+![Animator view](http://i.imgur.com/DPSALl1.png)
 
 We see 5 boxes here:
 
@@ -52,7 +52,7 @@ Let's click on the arrow between `Any State` and `Death`.
 
 You'll notice the inspector view changed on the right.
 
-![Transition Inspector]({{ site.url }}/img/2017-01-09/inspector.png)
+![Transition Inspector](http://i.imgur.com/I0KTmHc.png)
 
 There's quite a lot going on here. The biggest part you might notice is the timing of switching between animations.
 
