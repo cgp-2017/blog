@@ -49,7 +49,7 @@ Try adding a function called "MoveTowards" to your `follow.js` script and give i
 
 <details>
   <summary>How should it all look put together? </summary>
-  ```javascript
+  ```
   function RandomMovement ()
 {
   if (dauer == 0) {
@@ -70,7 +70,7 @@ Try adding a function called "MoveTowards" to your `follow.js` script and give i
 ## Range
 <details> 
   <summary>Q1: How would you write the other 3 variables? </summary>
-   ```javascript
+   ```
 public var hasRange : boolean;
 public var range : int;
 public var following : boolean;
