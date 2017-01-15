@@ -38,11 +38,11 @@ Try adding a function called "MoveTowards" to your `follow.js` script and give i
 
 <details>
   <summary>Try it and then check your answer by clicking on the black triangle! </summary>
-  <code>
+  <pre><code>
     function MoveTowards(target) {
     
     }
-    </code>
+    </code></pre>
 </details>
 
 ## Random Walking
