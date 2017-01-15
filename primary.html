@@ -1,9 +1,9 @@
 {% for post in site.posts reversed %}
-<li>
-  {% if post.grade == 'primary' %}
-    <h3>
-      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </h3>
-  {% endif %}
-</li>
+  <li>
+    {% if post.grade == 'primary' %}
+      <h3>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h3>
+    {% endif %}
+  </li>
 {% endfor %}
