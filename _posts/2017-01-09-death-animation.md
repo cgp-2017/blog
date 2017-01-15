@@ -1,3 +1,11 @@
+---
+title: "Death Animation"
+date: 2017-01-15 10:00
+grade: secondary
+---
+
+# __Death Animation__
+
 # Animation Controllers
 
 Last time, we added some new assets to our game from the Unity demo. We'll be using some of these to make things a little more interesting.
