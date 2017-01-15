@@ -4,9 +4,7 @@ layout: default
 {% for post in site.posts reversed %}
   {% if post.grade == 'secondary' %}
     <li>
-      <h3>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </h3>
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
     </li>
   {% endif %}
 {% endfor %}
