@@ -1,5 +1,5 @@
 # What group are you in?
 
-## [Primary](/primary)
+## [Primary](/blog/primary)
 
-## [Secondary](/secondary)
+## [Secondary](/blog/secondary)

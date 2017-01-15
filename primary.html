@@ -1,12 +1,12 @@
 ---
-# this is an empty front matter
+layout: default
 ---
 {% for post in site.posts reversed %}
-  <li>
-    {% if post.grade == 'primary' %}
+  {% if post.grade == 'primary' %}
+    <li>
       <h3>
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       </h3>
-    {% endif %}
-  </li>
+    </li>
+  {% endif %}
 {% endfor %}
