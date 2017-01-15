@@ -4,9 +4,9 @@ date: 2017-01-15 10:00
 grade: secondary
 ---
 
-# __Death Animation__
+# Death Animation
 
-# Animation Controllers
+## Animation Controllers
 
 Last time, we added some new assets to our game from the Unity demo. We'll be using some of these to make things a little more interesting.
 
@@ -25,7 +25,7 @@ This is something we imported from the demo, and we can have a look at it. Go in
 
 Here you'll find the different objects for animation. Let's double click on the EnemyAnimatorController.
 
-# The Animator View
+## The Animator View
 
 Don't worry! The Scene editing view isn't gone. You can see it's now changed into the Animator tab.
 
@@ -67,14 +67,14 @@ There's quite a lot going on here. The biggest part you might notice is the timi
 
 What we're interested in here is the `Conditions`. Here, the demo already gave us a contiditon for switching to the `Death` state. In order to do so, in our code, we need to trigger the `Dead` condition (notice the capital D!)
 
-# So what are we doing today, then?
+## So what are we doing today, then?
 
 What indeed:
 
 1. When we shoot an enemy, we'll trigger the death animation.
 2. When the enemy is in the death animation, it will not move (duh! Corpses don't move)
 
-# 1. Trigger the death animation
+## 1. Trigger the death animation
 
 Let's open up our list of scripts. I hope by now I don't need to tell you which one we should be looking at. 🙃
 
@@ -111,7 +111,7 @@ But be warned: This will only work on the Zombunny, the Zombear and the Hellepha
 
 Moving on!
 
-# 2. Stop moving after death.
+## 2. Stop moving after death.
 
 So you'll notice that if you shoot the enemy and it falls over dead, it keeps moving toward you. I don't need to tell you how creepy this is. One thing is a moving living dead, but a dead moving living dead? NOPE
 
@@ -174,6 +174,6 @@ When you slide, you have some speed already but you'll keep going until you've r
 
 In this situation, it makes sense for a monster to slide on the floor a little with all that speed it was running at you with.
 
-# But hey okay, I'm a super genius and I'm done. What now?
+## But hey okay, I'm a super genius and I'm done. What now?
 
 It's important not to overload you. Play around with these new things! Try changing the animations. Make tricky enemy placements. Import stuff from the asset store like obstacles and see what works and what doesn't!
