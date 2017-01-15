@@ -49,7 +49,7 @@ Try adding a function called "MoveTowards" to your `follow.js` script and give i
 
 <details>
   <summary>How should it all look put together? </summary>
-  ```
+ <pre><code style="javascript">
   function RandomMovement ()
 {
   if (dauer == 0) {
@@ -61,7 +61,7 @@ Try adding a function called "MoveTowards" to your `follow.js` script and give i
   dauer = dauer + Time.deltaTime;
   }
 }
-```
+</code></pre>
 </details>
 
 ## If statement logic
