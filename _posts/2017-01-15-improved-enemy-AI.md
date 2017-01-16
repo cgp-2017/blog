@@ -14,14 +14,7 @@ grade: secondary
   - with the follow.js script attached
   
 ### What we are about to add to the AI programmed in the follow.js script:
-- random walking
-- a set of if statements to customise the enemy behaviour with the following parameters
-  - idle_walking?
-  - is_following?
-  - range?
-  - speed(?)
-  
-### What's the result?
+
 You will have a customisable enemy behaviour script you can add to different enemy types and then set up so they behave very differently from each other without changing the script itself:
 
 - one enemy could always be following you
@@ -55,6 +48,14 @@ Why? Because `target` is the parameter of our `MoveTowards` function. When we us
 MoveTowards(overThere);
 ```
 (this will work as long as 'overThere' is a position that Unity understands.)
+
+A parameter is just a special term for variables you give to a function to do with what it's supposed to do.
+
+For example, you might have a function called `Add(a,b)` that takes two numbers as parameters (a and b), adds them together and then returns the result.
+
+So `Add(1,2)` would return `3`.
+
+For our `MoveTowards(target)` function, the parameter needs to be a postion.
 
 <details>
 <summary><b>How should it all look put together? </b></summary>
