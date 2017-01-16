@@ -38,7 +38,7 @@ To define a function you start by writing "`function`" its name (capitalized) an
 Try adding a function called "MoveTowards" to your `follow.js` script and give it the parameter "target".
 
 <details>
-  <summary>Try it and then check your answer by clicking on the black triangle! </summary>
+<summary><b>Try it and then check your answer by clicking on the black triangle!</b> </summary>
   <pre><code>
       function MoveTowards(target) {
       
@@ -57,7 +57,7 @@ MoveTowards(overThere);
 (this will work as long as 'overThere' is a position that Unity understands.)
 
 <details>
-  <summary>How should it all look put together? </summary>
+<summary><b>How should it all look put together? </b></summary>
  <pre><code style="javascript">
 function MoveToward (target) {
   var animationName : String = "Death";
@@ -73,7 +73,7 @@ function MoveToward (target) {
 Let's write another function. This time it will be called "RandomMovement" and will tell the AI how we want it to move randomly. It won't have a parameter.
 
 <details>
-  <summary>Try setting it up</summary>
+<summary><b>Try setting it up</b></summary>
  <pre><code style="javascript">
   function RandomMovement () {
   
@@ -99,7 +99,7 @@ We add a new variable!
 - we won't need to see or modify the variable in Unity
 
 <details>
-  <summary>Add it to the other variables at the top of the script! </summary>
+<summary><b>Add it to the other variables at the top of the script!</b> </summary>
  <pre><code>
   private var duration : float = 0; 
 </code></pre>
@@ -119,7 +119,7 @@ So let's say we want to pick a new random direction every 10 seconds. How can we
 You might already have realised that we will need an `if` statement to make that happen.
 
 <details>
-  <summary>Try writing it! (Don't worry about how to pick the direction--just the if statement structure) </summary>
+  <summary><b>Try writing it! (Don't worry about how to pick the direction--just the if statement structure)</b> </summary>
  <pre><code>
   if (duration == 0) {  
     // here we will put the code to pick a random direction (THIS IS JUST A COMMENT)
@@ -134,28 +134,38 @@ You might already have realised that we will need an `if` statement to make that
 </details>
 
 
-How do pick a direction at random in Unity? 
+How do pick a random positon to move towards in Unity? 
 
-Let's go really basic here. (Really, very often programming is just taking a concept and breaking it down to a really simple level to figure out how to explain it to a computer!)
-What is a direction? You have a start point and from there you point towards a second point.
+We start with our current position
 
 <details>
-  <summary>What is our starting point? (Remember this is the direction the enemy should go.)</summary>
+<summary><b>What is our starting point? (Remember this is the direction the enemy should go.)</b></summary>
   the enemy's current position!
 </details>
 
 <details>
-  <summary>How do we get that in Unity?</summary>
+<summary><b>How do we get that in Unity?</b></summary>
   <code>this.gameObject.transform.position</code>
 </details>
 
 
-We use a command called `Random.onUnitSphere`
+We use a command called `Random.onUnitSphere`. Think of it as a bubble. It's exactly one unit in diameter. By adding it to our characters current position, we make it a bubble that surrounds the enemy.
+This command picks one random point on this bubble -- so you can get any possible direction the enemy could be moving towards. 
+But one unit is not very far. How do we fix this? We just multiply it by a higher number! 50 should be fine. 
 
-
+To sum up, every time the duration is 0, we want the enemy to move towards its position plus a random point on the sphere times 50.
 
 <details>
-  <summary>How should it all look put together? </summary>
+<summary><b>Translated into javascript it looks like this: </b></summary>
+ <pre><code>
+    MoveToward(this.gameObject.transform.position + Random.onUnitSphere * 50);
+</code></pre>
+</details>
+
+Hopefully, you realized where in our function that last line should go. Double-check below:
+
+<details>
+<summary><b>How should the completed function look? </b></summary>
  <pre><code>
   function RandomMovement ()
 {
@@ -174,9 +184,9 @@ We use a command called `Random.onUnitSphere`
 ## If statement logic
 
 
-## Range
+### Range
 <details> 
-  <summary>Q1: How would you write the other 3 variables? </summary>
+<summary><b>Q1: How would you write the other 3 variables? </b></summary>
 <pre><code>
 public var hasRange : boolean;
 public var range : int;
