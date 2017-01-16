@@ -38,11 +38,7 @@ Try adding a function called "MoveTowards" to your `follow.js` script and give i
 
 <details>
   <summary>Try it and then check your answer by clicking on the black triangle! </summary>
-  <pre><code>
-    function MoveTowards(target) {
-    
-    }
-    </code></pre>
+
 </details>
 
 
@@ -98,7 +94,7 @@ We add a new variable!
 
 <details>
   <summary>Add it to the other variables at the top of the script! </summary>
- <pre><code style="javascript">
+ <pre><code>
   private var duration : float = 0; 
 </code></pre>
 </details>
@@ -118,7 +114,7 @@ You might already have realised that we will need an `if` statement to make that
 
 <details>
   <summary>Try writing it! (Don't worry about how to pick the direction--just the if statement structure) </summary>
- <pre><code> style="javascript">
+ <pre><code>
   if (duration == 0) {  
     // here we will put the code to pick a random direction (THIS IS JUST A COMMENT)
     duration = Time.deltaTime;
@@ -154,7 +150,7 @@ We use a command called `Random.onUnitSphere`
 
 <details>
   <summary>How should it all look put together? </summary>
- <pre><code style="javascript">
+ <pre><code>
   function RandomMovement ()
 {
   if (duration == 0) {
@@ -175,11 +171,11 @@ We use a command called `Random.onUnitSphere`
 ## Range
 <details> 
   <summary>Q1: How would you write the other 3 variables? </summary>
-   ```
+<pre><code>
 public var hasRange : boolean;
 public var range : int;
 public var following : boolean;
 public var idleWalking : boolean;
-```
+</pre></code>
 </details>
 
