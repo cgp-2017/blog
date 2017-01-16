@@ -186,16 +186,76 @@ Hopefully, you realized where in our function that last line should go. Double-c
 Now we put this all together by writing some if-statement logic in the update function:
 
 
+Let's recap! How should this AI work?
 
-### Range
+We want to have a couple variables that define the enemy's behaviour:
+
+- is it chasing you?
+  - --> variable name "following", possible values: true/false
+- if it is chasing you, does it always know where you are or does it have a range?
+  - --> variable name "hasRange", possible values: true/false
+- if it has a range, how big is it?
+  - --> variable name "range", possible values: numbers
+- if it isn't following you or if you are out of range, is it walking around?
+  - --> variable name "idleWalking", possible values: true/false
+  
+  
+Try putting these variables in javascript terms and adding them to the beginning of your script, so Unity can understand them too. 
+(Remember that the kind of variable that can only have true/false als values is called a "boolean" and that we want to be able to set up these variables for different enemies outside of the code!)
+
 <details> 
-<summary><b>Q1: How would you write the other 3 variables? </b></summary>
+<summary><b>Q1: How would you write these variables? </b></summary>
 <pre><code>
+public var following : boolean;
 public var hasRange : boolean;
 public var range : int;
-public var following : boolean;
 public var idleWalking : boolean;
 </code></pre>
+</details>
+
+
+Now let's structure our if statement. We have 3 possible behaviours.
+
+- the enemy is chasing you
+- it is moving randomly
+- it is standing still
+
+**If** following is *true*
+  We want to check if the player is in *range*
+  **if** it is **OR** if the enemy has *no range*
+    we want to **MoveTowards** the *player*
+  **else** **if** idleWalking is *true*
+    we want to use **RandomMovement**
+(Otherwise the enemy will just not move -- no need to do anything here.)
+
+
+So far, all our if statement condition looked like this:
+
+```javascript
+if(CONDITION) {
+  \\stuff that happens if condition is met
+  }
+```
+But in the 3rd line, we want to check if **either** one **or** another condition is true. This syntax looks like that:
+
+```javascript
+if(CONDITION || SECOND_CONDITION) {
+  \\stuff that happens if either condition is met
+  }
+```
+
+<details>
+<summary><b>Try setting up the structure of this if statement:</b></summary>
+<pre><code>
+  if (following == true) {
+    \\check if player is in range
+    if (distance.mangnitude &lt; range || hasRange == false) {
+      \\enemy follows the player
+    }
+  } else if (idleWalking == true) {
+    \\enemy moves randomly
+  }
+}</code></pre>
 </details>
 
 <details>
