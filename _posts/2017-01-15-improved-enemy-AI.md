@@ -38,11 +38,13 @@ Try adding a function called "MoveTowards" to your `follow.js` script and give i
 
 <details>
   <summary>Try it and then check your answer by clicking on the black triangle! </summary>
-    <pre><code>
+  <pre><code>
       function MoveTowards(target) {
       
       }
+  </code></pre>
 </details>
+      
 
 
 Now we take the the code from last week and move it from the `Update` function to our new `MoveTowards` functions. We replace `player.position` with `target`. 
@@ -139,12 +141,12 @@ What is a direction? You have a start point and from there you point towards a s
 <details>
   <summary>What is our starting point? (Remember this is the direction the enemy should go.)</summary>
   the enemy's current position!
-<details>
+</details>
 
 <details>
   <summary>How do we get that in Unity?</summary>
   <code>this.gameObject.transform.position</code>
-<details>
+</details>
 
 
 We use a command called `Random.onUnitSphere`
@@ -179,6 +181,6 @@ public var hasRange : boolean;
 public var range : int;
 public var following : boolean;
 public var idleWalking : boolean;
-</pre></code>
+</code></pre>
 </details>
 
