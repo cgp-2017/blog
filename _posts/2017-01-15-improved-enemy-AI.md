@@ -214,7 +214,7 @@ public var idleWalking : boolean;
 </code></pre>
 </details>
 
-###How to get the distance
+### How to get the distance
 
 We know alreayd how to get the Position of the enemy and of the player.
 <details> 
@@ -246,7 +246,7 @@ distance.magnitude < range
 ```
 This will return *true* if you are in range and *false* if you are not.
 
-###The actual if statement
+### The actual if statement
 
 Now let's structure our if statement. We have 3 possible behaviours.
 
