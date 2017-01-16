@@ -118,11 +118,9 @@ You might already have realised that we will need an `if` statement to make that
 
 <details>
   <summary>Try writing it! (Don't worry about how to pick the direction--just the if statement structure) </summary>
- <pre><code style="javascript">
-  if (duration == 0) {
-  
+ <pre><code> style="javascript">
+  if (duration == 0) {  
     // here we will put the code to pick a random direction (THIS IS JUST A COMMENT)
-    
     duration = Time.deltaTime;
   } else if (duration > 10) {
     duration = 0;
