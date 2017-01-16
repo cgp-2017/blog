@@ -45,20 +45,127 @@ Try adding a function called "MoveTowards" to your `follow.js` script and give i
     </code></pre>
 </details>
 
+
+Now we take the the code from last week and move it from the `Update` function to our new `MoveTowards` functions. We replace `player.position` with `target`. 
+Why? Because `target` is the parameter of our `MoveTowards` function. When we use the function we put the location we want to move to inside the brackets:
+
+```javascript
+MoveTowards(overThere);
+```
+(this will work as long as 'overThere' is a position that Unity understands.)
+
+<details>
+  <summary>How should it all look put together? </summary>
+ <pre><code style="javascript">
+function MoveToward (target) {
+  var animationName : String = "Death";
+  if( !GetComponent(Animator).GetCurrentAnimatorStateInfo(0).IsName(animationName)) {
+    nav.SetDestination (target);
+  }
+}
+</code></pre>
+</details>
+
+
 ## Random Walking
+Let's write another function. This time it will be called "RandomMovement" and will tell the AI how we want it to move randomly. It won't have a parameter.
+
+<details>
+  <summary>Try setting it up</summary>
+ <pre><code style="javascript">
+  function RandomMovement () {
+  
+  }
+</code></pre>
+</details>
+
+
+Let's move on to the content of our function. We want our enemy to move in random directions. But how do we express this so that a computer understands this? Let's break it down!
+- the enemy should pick a random direction
+- then it will move there for a certain amount of time
+- and then it should pick a new direction 
+- ..... and so on
+
+First thing we notice: We need to keep track of how long the enemy has been moving in one direction!
+
+How do we do this?
+
+We add a new variable!
+- name "duration"
+- type float-point number
+- initial value: 0
+- we won't need to see or modify the variable in Unity
+
+<details>
+  <summary>Add it to the other variables at the top of the script! </summary>
+ <pre><code style="javascript">
+  private var duration : float = 0; 
+</code></pre>
+</details>
+
+So let's say we want to pick a new random direction every 10 seconds. How can we implement that?
+
+- we start at 0 seconds
+  - random direction should be picked
+- now 10 seconds pass 
+  - the direction shouldn't change
+  - duration should be updated to how much time as passed
+- after 10 seconds
+  - the duration should be reset
+  
+  
+You might already have realised that we will need an `if` statement to make that happen.
+
+<details>
+  <summary>Try writing it! (Don't worry about how to pick the direction--just the if statement structure) </summary>
+ <pre><code style="javascript">
+  if (duration == 0) {
+  
+    // here we will put the code to pick a random direction (THIS IS JUST A COMMENT)
+    
+    duration = Time.deltaTime;
+  } else if (duration > 10) {
+    duration = 0;
+  } else {
+    duration = duration + Time.deltaTime;
+  }
+}
+</code></pre>
+</details>
+
+
+How do pick a direction at random in Unity? 
+
+Let's go really basic here. (Really, very often programming is just taking a concept and breaking it down to a really simple level to figure out how to explain it to a computer!)
+What is a direction? You have a start point and from there you point towards a second point.
+
+<details>
+  <summary>What is our starting point? (Remember this is the direction the enemy should go.)</summary>
+  the enemy's current position!
+<details>
+
+<details>
+  <summary>How do we get that in Unity?</summary>
+  <code>this.gameObject.transform.position</code>
+<details>
+
+
+We use a command called `Random.onUnitSphere`
+
+
 
 <details>
   <summary>How should it all look put together? </summary>
  <pre><code style="javascript">
   function RandomMovement ()
 {
-  if (dauer == 0) {
-  nav.SetDestination (this.gameObject.transform.position + Random.onUnitSphere * 20);
-  dauer = Time.deltaTime;
-  } else if (dauer > 5) {
-  dauer = 0;
+  if (duration == 0) {
+    MoveToward(this.gameObject.transform.position + Random.onUnitSphere * 50);
+    duration = Time.deltaTime;
+  } else if (duration > 10) {
+    duration = 0;
   } else {
-  dauer = dauer + Time.deltaTime;
+    duration = duration + Time.deltaTime;
   }
 }
 </code></pre>
