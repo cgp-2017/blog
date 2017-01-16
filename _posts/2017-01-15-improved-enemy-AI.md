@@ -183,6 +183,9 @@ Hopefully, you realized where in our function that last line should go. Double-c
 
 ## If statement logic
 
+Now we put this all together by writing some if-statement logic in the update function:
+
+
 
 ### Range
 <details> 
@@ -193,5 +196,20 @@ public var range : int;
 public var following : boolean;
 public var idleWalking : boolean;
 </code></pre>
+</details>
+
+<details>
+<summary><b>The completed function should look like this:</b></summary>
+<pre><code>function Update ()
+{
+  if (following == true) {
+    distance = player.position - this.gameObject.transform.position;
+    if (distance.magnitude \< range || hasRange == false) {
+      FollowPlayer();
+    }
+  } else if (idleWalking == true) {
+    RandomMovement();
+  }
+}</code></pre>
 </details>
 
