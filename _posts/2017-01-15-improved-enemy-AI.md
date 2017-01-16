@@ -59,7 +59,7 @@ MoveTowards(overThere);
 <details>
 <summary><b>How should it all look put together? </b></summary>
  <pre><code style="javascript">
-function MoveToward (target) {
+function MoveTowards (target) {
   var animationName : String = "Death";
   if( !GetComponent(Animator).GetCurrentAnimatorStateInfo(0).IsName(animationName)) {
     nav.SetDestination (target);
@@ -158,7 +158,7 @@ To sum up, every time the duration is 0, we want the enemy to move towards its p
 <details>
 <summary><b>Translated into javascript it looks like this: </b></summary>
  <pre><code>
-    MoveToward(this.gameObject.transform.position + Random.onUnitSphere * 50);
+    MoveTowards(this.gameObject.transform.position + Random.onUnitSphere * 50);
 </code></pre>
 </details>
 
@@ -170,7 +170,7 @@ Hopefully, you realized where in our function that last line should go. Double-c
   function RandomMovement ()
 {
   if (duration == 0) {
-    MoveToward(this.gameObject.transform.position + Random.onUnitSphere * 50);
+    MoveTowards(this.gameObject.transform.position + Random.onUnitSphere * 50);
     duration = Time.deltaTime;
   } else if (duration > 10) {
     duration = 0;
@@ -213,6 +213,39 @@ public var idleWalking : boolean;
 </code></pre>
 </details>
 
+###How to get the distance
+
+We know alreayd how to get the Position of the enemy and of the player.
+<details> 
+<summary><b>Little reminder </b></summary>
+<pre><code>
+player.position
+this.gameObject.transform.position
+</code></pre>
+</details>
+
+But how can we get the distance between the two and then compare it to the range?
+
+First we add a private variable called "distance" to the top of our script (it should be a type "Vector3").
+<details> 
+<summary><b>Like this:</b></summary>
+<pre><code>
+private var distance : Vector3;
+</code></pre>
+</details>
+
+To set it to the current distance between the two, we simply take enemy's position and subtract it from the player's position:
+```javascript
+distance = player.position - this.gameObject.transform.position;
+```
+
+How can we compare the distance (a vector) to the range (a number)?
+```javascript
+distance.magnitude < range
+```
+This will return *true* if you are in range and *false* if you are not.
+
+###The actual if statement
 
 Now let's structure our if statement. We have 3 possible behaviours.
 
@@ -220,27 +253,28 @@ Now let's structure our if statement. We have 3 possible behaviours.
 - it is moving randomly
 - it is standing still
 
-**If** following is *true*
-  We want to check if the player is in *range*
-  **if** it is **OR** if the enemy has *no range*
-    we want to **MoveTowards** the *player*
-  **else** **if** idleWalking is *true*
-    we want to use **RandomMovement**
-(Otherwise the enemy will just not move -- no need to do anything here.)
+
+* **If** following is *true*
+  * We want to check if the player is in *range*
+  * **if** it is **OR** if the enemy has *no range*
+    * we want to **MoveTowards** the *player*
+  * **else** **if** idleWalking is *true*
+    * we want to use **RandomMovement**
+* (Otherwise the enemy will just not move -- no need to do anything here.)
 
 
 So far, all our if statement condition looked like this:
 
 ```javascript
 if(CONDITION) {
-  \\stuff that happens if condition is met
+  //stuff that happens if condition is met
   }
 ```
 But in the 3rd line, we want to check if **either** one **or** another condition is true. This syntax looks like that:
 
 ```javascript
 if(CONDITION || SECOND_CONDITION) {
-  \\stuff that happens if either condition is met
+  //stuff that happens if either condition is met
   }
 ```
 
@@ -257,6 +291,14 @@ if(CONDITION || SECOND_CONDITION) {
   }
 }</code></pre>
 </details>
+
+Now as the last step, we just need to fill in the proper code for our place-holders:
+- `distance = player.position - this.gameObject.transform.position;`
+- `FollowPlayer();`
+- `RandomMovement();`
+
+Try it and then compare it with the completed function below:
+
 
 <details>
 <summary><b>The completed function should look like this:</b></summary>
