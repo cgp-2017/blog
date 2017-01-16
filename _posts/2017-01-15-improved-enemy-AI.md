@@ -23,6 +23,7 @@ grade: secondary
   
 ### What's the result?
 You will have a customisable enemy behaviour script you can add to different enemy types and then set up so they behave very differently from each other without changing the script itself:
+
 - one enemy could always be following you
 - another might walk around randomly and when you are close by start following you, until you out-run him again
 - a third might simply be walking around and ignore you
