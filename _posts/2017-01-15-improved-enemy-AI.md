@@ -204,7 +204,7 @@ public var idleWalking : boolean;
 {
   if (following == true) {
     distance = player.position - this.gameObject.transform.position;
-    if (distance.magnitude \< range || hasRange == false) {
+    if (distance.magnitude &lt; range || hasRange == false) {
       FollowPlayer();
     }
   } else if (idleWalking == true) {
