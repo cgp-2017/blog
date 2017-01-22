@@ -11,10 +11,52 @@ You'll find here lots of small things you can add to your game:
 1. Giving Ethan a little color
 2. Ammo for your gun and ammo to pick up
 3. Add a little flash to your gun
+3. Build and play your game
 
 ## Giving Ethan a little color
 
+Okay, this one has been asked for a lot.
+
+First off, right click and save this picture:
+
+![](http://i.imgur.com/P7wsEuI.jpg)
+
+Yes. I know. Horrifying. This is how textures work.
+
+Applying this on Ethan is __super easy__.
+
+### 1. Add the texture to Unity
+
+Drag the picture with the horrors in the `Textures` folder.
+
+![](http://i.imgur.com/APYSj4I.png)
+
+### 2. Open up Ethan's body
+
+![](http://i.imgur.com/MYZ8Rul.png)
+
+### 3. Expand his materials section
+
+![](http://i.imgur.com/cZUBAJa.png)
+
+Now, click on the little circle next to Albedo, and select your texture that you dragged in.
+
+### 4. DONE. TRY IT
+
 ## Ammo for your gun and ammo to pick up
+
+The concept is simple.
+
+You start with a certain amount of ammo, and when you shoot, you lose one bullet. When you have no more bullets, you can't shoot.
+
+Let's open up our shooting script.
+
+- Add a new `public var`:
+  - `ammo`. Its type is `int`, with a value of 100.
+
+We need to add one line to the `Shoot` function. Just make it reduce the value of `ammo` by one
+
+__You need to figure that one out!__
 
 ## Add a little flash to your gun
 
@@ -97,3 +139,12 @@ This will turn off the light if now enough time has passed.
 
 
 ### 8. TRY IT
+
+## Build and play your game
+
+- Click on `File > Build Settings`.
+    - Make sure that __only the scenes you made__ are ticked. Click on `Build` at the bottom of the window.
+- Choose a destination.
+
+That's it!
+
