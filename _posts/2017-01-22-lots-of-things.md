@@ -51,12 +51,44 @@ You start with a certain amount of ammo, and when you shoot, you lose one bullet
 
 Let's open up our shooting script.
 
+### 1. One new public var
+
 - Add a new `public var`:
   - `ammo`. Its type is `int`, with a value of 100.
 
-We need to add one line to the `Shoot` function. Just make it reduce the value of `ammo` by one
+### 2. Subtract one piece of ammo
+
+We need to add __one line of code__ to the `Shoot` function. Just make it reduce the value of `ammo` by one
 
 __You need to figure that one out!__
+
+
+### 3. Don't shoot if there's no ammo
+
+One more piece of code to get this working. Look at the first `if` statement in the `Update` method: `if (Input.GetButton("Fire1") && Time.time > nextShot) {`.
+
+Let's add another `&&` part:
+
+```
+if (Input.GetButton("Fire1") && Time.time > nextShot && ) {
+```
+
+__Now you need to write in code: Ammo is bigger than.... Bigger than what?__
+
+
+### 4. Ammo boxes
+
+I'll just leave this here:
+
+![](http://i.imgur.com/ypFGvhk.png)
+
+### 5. COLLECT them 😉
+
+Maybe there's a COLLECTING script you can copy from?
+
+What tag should we make for our AMMO boxes?
+
+What should happen to our AMMO value when you pick up a box?
 
 ## Add a little flash to your gun
 
