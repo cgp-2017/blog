@@ -4,6 +4,8 @@ date: 2017-01-15 10:00
 grade: secondary
 ---
 
+# IF YOU EVER LOSE THEM, YOUR SCRIPTS ARE [here](https://cgp-2017.github.io/blog/2017/01/22/scripts.html)
+
 # Lots of things you can do
 
 You'll find here lots of small things you can add to your game:
