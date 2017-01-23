@@ -4,7 +4,6 @@ date: 2017-01-15 10:00
 grade: secondary
 ---
 
-# IF YOU EVER LOSE THEM, YOUR SCRIPTS ARE [here](https://cgp-2017.github.io/blog/2017/01/22/scripts.html)
 
 # Lots of things you can do
 
@@ -14,6 +13,8 @@ You'll find here lots of small things you can add to your game:
 2. Ammo for your gun and ammo to pick up
 3. Add a little flash to your gun
 3. Build and play your game
+
+## PS: IF YOU EVER LOSE THEM, YOUR SCRIPTS ARE [HERE](https://cgp-2017.github.io/blog/2017/01/22/scripts.html)
 
 ## Giving Ethan a little color
 
