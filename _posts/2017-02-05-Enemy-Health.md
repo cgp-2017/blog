@@ -23,6 +23,7 @@ public var enemyHealth : int = 100;
   - (Remember the condition goes between `(` and `)`!)
 - Inside the if statement, we add these two lines:
   - As always, make sure that you entered those lines after the `{` and before the `}` of the if statement.
+
 ```javascript
 var animationTrigger : String = "Dead";
 this.gameObject.collider.GetComponent(Animator).SetTrigger(animationTrigger);
