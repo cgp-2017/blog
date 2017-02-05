@@ -19,13 +19,14 @@ Go to `Assets > Audio > Effects` to check them out!
 - click on "Add Component"
 - select `AudioSource`
 - drag the right sound for your enemy from `Assets > Audio > Effects` onto the `AudioClip` field
+- untick "Play On Awake"
 
 [ screen shot]
 
 ## 2. Add Variable in `EnemyHealth` script
 
 ```javascript
-private var hurtAudio : AudioSource;
+public var hurtAudio : AudioSource;
 ```
 
 Add to `start` function:
