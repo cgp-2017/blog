@@ -7,7 +7,9 @@ grade: secondary
 # Enemy Health
 
 ## Add Enemy Health Script
+
 ### 1. Create a new js script
+
 Create a new script and call it `EnemyHealth`.
 
 ### 2. Set up the necessary variables
