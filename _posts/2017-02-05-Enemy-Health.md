@@ -59,8 +59,6 @@ how many times?
 
 ## I'm done! Oh no! What do I even do with myself now?! 
 
-Feel free to add any of these features to your game:
+Feel free to add this feature to your game:
 
-- Adding a sound when the enemy is hurt
-- Making the enemy sink through the floor when they die
-- Showing each enemy's health above them
+- [Adding a sound when the enemy is hurt](https://cgp-2017.github.io/blog/2017/02/05/Enemy-Damage-Sounds.html)
