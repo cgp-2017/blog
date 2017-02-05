@@ -61,4 +61,4 @@ how many times?
 
 Feel free to add this feature to your game:
 
-- [Adding a sound when the enemy is hurt](https://cgp-2017.github.io/blog/2017/02/05/Enemy-Damage-Sounds.html)
+- [Adding a sound when the enemy is hurt](https://cgp-2017.github.io/blog/2017/02/05/Enemy-Damage-Sound.html)
