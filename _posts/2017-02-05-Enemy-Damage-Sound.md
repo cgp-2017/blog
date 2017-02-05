@@ -6,7 +6,7 @@ grade: secondary
 
 # Add an Enemy Damage Sound
 
-The assets we downloaded actually include death and hurt sounds for the Hellephant, the Zombear and the Zombunny.
+The assets we downloaded actually include hurt sounds for the Hellephant, the Zombear and the Zombunny.
 
 Go to `Assets > Audio > Effects` to check them out!
 
@@ -18,6 +18,7 @@ Go to `Assets > Audio > Effects` to check them out!
 - scroll to the bottom in its `inspector`
 - click on "Add Component"
 - select `AudioSource`
+- drag the right sound for your enemy from `Assets > Audio > Effects` onto the `AudioClip` field
 
 [ screen shot]
 
@@ -42,28 +43,12 @@ hurtAudio = GetComponent(AudioSource);
 enemyhealth.hurtAudio.Play();
 ```
 
+## 4. Test your game
 
-## 4. Choose which sound to play
-- in the enemy's `Inspector`, in the `EnemyHealth` script componenent, you now have the `hurtSound` field
-- drag the right sound for your enemy from `Assets > Audio > Effects` onto that field
-
-
-## 5. Test your game
-
-## 6. Add to the other enemy types
+## 5. Add to the other enemy types
 - all enemy types use the same scripts, you don't need to change them further
 - add the `AudioSource` component
 - choose the right sound effect
 - only do this once per enemy type! Make a prefab, don't do it for every single Hellephant!
 
-
-# Add an Enemy Death Sound
-
-You follow the same steps as above except:
-
-- replace 'hurt' with 'death' when adding variables
-- for **3. Play the sound**:
-  - add the line **in the `EnemyHealth` script**
-  - inside the if statement
-  
 
