@@ -18,14 +18,15 @@ public var enemyHealth : int = 100;
 ```
 
 ### 3. Kill the enemy if its health is below zero
-Set up an `if statement` inside the `update` function that checks if `enemyHealth` is smaller than 0.
-
-Inside the if statement, we add the same two lines we were using in the `Shooting` script so far to kill the enemies:
+- Set up an `if statement` inside the `update` function 
+- The condition should be: `enemyHealth` is smaller than 0.
+  - (Remember the condition goes between `(` and `)`!)
+- Inside the if statement, we add these two lines:
+  - As always, make sure that you entered those lines after the `{` and before the `}` of the if statement.
 ```javascript
 var animationTrigger : String = "Dead";
 this.gameObject.collider.GetComponent(Animator).SetTrigger(animationTrigger);
 ```
-As always, make sure that you entered those lines after the `{` and before the `}` of the if statement.
 
 ## Adapt Shooting Script
 Now we need to change the shooting script so that the enemies no longer die immediately when they are hit, but instead lose health.
