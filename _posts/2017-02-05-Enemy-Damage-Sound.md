@@ -44,7 +44,7 @@ enemyhealth.hurtAudio.Play();
 
 
 ## 4. Choose which sound to play
-- in enemy's `Inspector`, in the `EnemyHealth` script componenent, you now have the `hurtSound` field
+- in the enemy's `Inspector`, in the `EnemyHealth` script componenent, you now have the `hurtSound` field
 - drag the right sound for your enemy from `Assets > Audio > Effects` onto that field
 
 
@@ -63,7 +63,7 @@ You follow the same steps as above except:
 
 - replace 'hurt' with 'death' when adding variables
 - for **3. Play the sound**:
-  - add the line ** in the `EnemyHealth` script**
+  - add the line **in the `EnemyHealth` script**
   - inside the if statement
   
 
