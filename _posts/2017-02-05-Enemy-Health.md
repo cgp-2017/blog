@@ -34,6 +34,7 @@ Now we need to change the shooting script so that the enemies no longer die imme
 
 ### 1. Add a variable
 Since the variable for each enemy's health is stored in the `EnemyHealth` script, we need a way to communicate between scripts. We do this by adding the `EnemyHealth` script in a variable:
+
 ```javascript
 public var enemyHealth : EnemyHealth;
 ```
