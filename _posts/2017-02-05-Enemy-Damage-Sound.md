@@ -11,7 +11,7 @@ The assets we downloaded actually include hurt sounds for the Hellephant, the Zo
 
 Go to `Assets > Audio > Effects` to check them out!
 
-[screen shot]
+![](http://i.imgur.com/BBfR46v.png)
 
 ## 1. Add `AudioSource` component
 
@@ -22,7 +22,7 @@ Go to `Assets > Audio > Effects` to check them out!
 - drag the right sound for your enemy from `Assets > Audio > Effects` onto the `AudioClip` field
 - untick "Play On Awake"
 
-[ screen shot]
+![](http://i.imgur.com/W1TlX9Y.png)
 
 ## 2. Add Variable in `EnemyHealth` script
 
