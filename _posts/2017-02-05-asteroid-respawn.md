@@ -2,6 +2,7 @@
 title: "Space Game — Session 3"
 date: 2017-02-05 10:00
 grade: primary
+published: true
 ---
 
 # Space Game — Session 3
@@ -86,8 +87,3 @@ Well now it's a bit boring. The asteroid just falls in one place.
 How about, when you set the Y to `negate(height of self)`, maybe you can add an
 extra block in there to `set x of self to (Random number between(0, screen
 width))`? Can you figure that out?
-
-
-
-
-

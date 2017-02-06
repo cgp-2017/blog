@@ -2,6 +2,7 @@
 title: "Improved Enemy AI"
 date: 2017-01-15 10:00
 grade: secondary
+published: true
 ---
 
 # Improved Enemy AI
@@ -12,7 +13,7 @@ grade: secondary
 - the follow.js script
 - at least one enemy type
   - with the follow.js script attached
-  
+
 ### What we are about to add to the AI programmed in the follow.js script:
 
 You will have a customisable enemy behaviour script you can add to different enemy types and then set up so they behave very differently from each other without changing the script itself:
@@ -34,14 +35,14 @@ Try adding a function called "MoveTowards" to your `follow.js` script and give i
 <summary><b>Try it and then check your answer by clicking on the black triangle!</b> </summary>
   <pre><code>
       function MoveTowards(target) {
-      
+
       }
   </code></pre>
 </details>
-      
 
 
-Now we take the the code from last week and move it from the `Update` function to our new `MoveTowards` functions. We replace `player.position` with `target`. 
+
+Now we take the the code from last week and move it from the `Update` function to our new `MoveTowards` functions. We replace `player.position` with `target`.
 Why? Because `target` is the parameter of our `MoveTowards` function. When we use the function we put the location we want to move to inside the brackets:
 
 ```javascript
@@ -77,7 +78,7 @@ Let's write another function. This time it will be called "RandomMovement" and w
 <summary><b>Try setting it up</b></summary>
  <pre><code style="javascript">
   function RandomMovement () {
-  
+
   }
 </code></pre>
 </details>
@@ -86,7 +87,7 @@ Let's write another function. This time it will be called "RandomMovement" and w
 Let's move on to the content of our function. We want our enemy to move in random directions. But how do we express this so that a computer understands this? Let's break it down!
 - the enemy should pick a random direction
 - then it will move there for a certain amount of time
-- and then it should pick a new direction 
+- and then it should pick a new direction
 - ..... and so on
 
 First thing we notice: We need to keep track of how long the enemy has been moving in one direction!
@@ -102,7 +103,7 @@ We add a new variable!
 <details>
 <summary><b>Add it to the other variables at the top of the script!</b> </summary>
  <pre><code>
-  private var duration : float = 0; 
+  private var duration : float = 0;
 </code></pre>
 </details>
 
@@ -110,13 +111,13 @@ So let's say we want to pick a new random direction every 10 seconds. How can we
 
 - we start at 0 seconds
   - random direction should be picked
-- now 10 seconds pass 
+- now 10 seconds pass
   - the direction shouldn't change
   - duration should be updated to how much time as passed
 - after 10 seconds
   - the duration should be reset
-  
-  
+
+
 You might already have realised that we will need an `if` statement to make that happen.
 
 <details>
@@ -135,7 +136,7 @@ You might already have realised that we will need an `if` statement to make that
 </details>
 
 
-How do pick a random positon to move towards in Unity? 
+How do pick a random positon to move towards in Unity?
 
 We start with our current position
 
@@ -151,8 +152,8 @@ We start with our current position
 
 
 We use a command called `Random.onUnitSphere`. Think of it as a bubble. It's exactly one unit in diameter. By adding it to our characters current position, we make it a bubble that surrounds the enemy.
-This command picks one random point on this bubble -- so you can get any possible direction the enemy could be moving towards. 
-But one unit is not very far. How do we fix this? We just multiply it by a higher number! 50 should be fine. 
+This command picks one random point on this bubble -- so you can get any possible direction the enemy could be moving towards.
+But one unit is not very far. How do we fix this? We just multiply it by a higher number! 50 should be fine.
 
 To sum up, every time the duration is 0, we want the enemy to move towards its position plus a random point on the sphere times 50.
 
@@ -199,12 +200,12 @@ We want to have a couple variables that define the enemy's behaviour:
   - --> variable name "range", possible values: numbers
 - if it isn't following you or if you are out of range, is it walking around?
   - --> variable name "idleWalking", possible values: true/false
-  
-  
-Try putting these variables in javascript terms and adding them to the beginning of your script, so Unity can understand them too. 
+
+
+Try putting these variables in javascript terms and adding them to the beginning of your script, so Unity can understand them too.
 (Remember that the kind of variable that can only have true/false als values is called a "boolean" and that we want to be able to set up these variables for different enemies outside of the code!)
 
-<details> 
+<details>
 <summary><b>Q1: How would you write these variables? </b></summary>
 <pre><code>
 public var following : boolean;
@@ -217,7 +218,7 @@ public var idleWalking : boolean;
 ### How to get the distance
 
 We know alreayd how to get the Position of the enemy and of the player.
-<details> 
+<details>
 <summary><b>Little reminder </b></summary>
 <pre><code>
 player.position
@@ -228,7 +229,7 @@ this.gameObject.transform.position
 But how can we get the distance between the two and then compare it to the range?
 
 First we add a private variable called "distance" to the top of our script (it should be a type "Vector3").
-<details> 
+<details>
 <summary><b>Like this:</b></summary>
 <pre><code>
 private var distance : Vector3;
@@ -315,4 +316,3 @@ Try it and then compare it with the completed function below:
   }
 }</code></pre>
 </details>
-

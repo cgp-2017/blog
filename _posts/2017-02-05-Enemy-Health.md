@@ -2,6 +2,7 @@
 title: "Enemy Health"
 date: 2017-02-05 10:00
 grade: secondary
+published: true
 ---
 
 # Enemy Health
@@ -18,7 +19,7 @@ public var enemyHealth : int = 100;
 ```
 
 ### 3. Kill the enemy if its health is below zero
-- Set up an `if statement` inside the `update` function 
+- Set up an `if statement` inside the `update` function
 - The condition should be: `enemyHealth` is smaller than 0.
   - (Remember the condition goes between `(` and `)`!)
 - Inside the if statement, we add these two lines:
@@ -40,7 +41,7 @@ public var enemyHealth : EnemyHealth;
 ```
 
 ### 2. Update the update function
-Instead of triggering the death animation, we now just want to decrease the hit enemy's health. 
+Instead of triggering the death animation, we now just want to decrease the hit enemy's health.
 
 To do this, we replace two commented-out lines (the grey one with the two slashes at the beginning) with the two lines underneath it:
 
@@ -57,7 +58,7 @@ The first one gets this specific enemy's current health from its specific `Enemy
 how many times?
 
 
-## I'm done! Oh no! What do I even do with myself now?! 
+## I'm done! Oh no! What do I even do with myself now?!
 
 Feel free to add this feature to your game:
 

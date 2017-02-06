@@ -2,6 +2,7 @@
 title: "Lots of things"
 date: 2017-01-15 10:00
 grade: secondary
+published: true
 ---
 
 
@@ -182,4 +183,3 @@ This will turn off the light if now enough time has passed.
 - Choose a destination.
 
 That's it!
-

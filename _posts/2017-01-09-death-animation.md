@@ -2,6 +2,7 @@
 title: "Death Animation"
 date: 2017-01-15 10:00
 grade: secondary
+published: true
 ---
 
 # Death Animation
