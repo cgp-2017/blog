@@ -2,6 +2,7 @@
 title: "Enemy Damage Sound"
 date: 2017-02-05 11:00
 grade: secondary
+published: true
 ---
 
 # Add an Enemy Damage Sound
