@@ -15,12 +15,12 @@ Create a new script and call it `EnemyHealth`.
 
 ### 2. Set up the necessary variables
 ```javascript
-public var enemyHealth : int = 100;
+public var enemyHealth : int = 20;
 ```
 
-### 3. Kill the enemy if its health is below zero
+### 3. Kill the enemy if its health is zero or less
 - Set up an `if statement` inside the `update` function
-- The condition should be: `enemyHealth` is smaller than 0.
+- The condition should be: `enemyHealth` is smaller than 0 (`enemyHealth <= 0`).
   - (Remember the condition goes between `(` and `)`!)
 - Inside the if statement, we add these two lines:
   - As always, make sure that you entered those lines after the `{` and before the `}` of the if statement.
@@ -55,7 +55,12 @@ To do this, we replace two commented-out lines (the grey one with the two slashe
 The first one gets this specific enemy's current health from its specific `EnemyHealth` component. The second one reduces it by 10.
 
 ### 3. Test it!
-how many times?
+The default enemy HP is 20 and each hit reduces it by 10, so it should take 2 hits to kill an enemy.
+
+### 4. Customize it for different enemy types
+
+- make sure that the enemy has the `enemyHealth` script attached
+- change the value in the "Enemy Health" field in the `inspector` to make an enemy easier or harder to kill
 
 
 ## I'm done! Oh no! What do I even do with myself now?!
