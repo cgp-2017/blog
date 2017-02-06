@@ -27,7 +27,7 @@ public var enemyHealth : int = 20;
 
 ```javascript
 var animationTrigger : String = "Dead";
-this.gameObject.collider.GetComponent(Animator).SetTrigger(animationTrigger);
+this.GetComponent(Animator).SetTrigger(animationTrigger);
 ```
 
 ## Adapt Shooting Script
