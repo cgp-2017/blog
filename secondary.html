@@ -2,7 +2,7 @@
 layout: default
 ---
 {% for post in site.posts reversed %}
-  {% if post.grade == 'secondary' && post.published == true %}
+  {% if post.grade == 'secondary' and post.published == true %}
     <li>
       <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
     </li>
