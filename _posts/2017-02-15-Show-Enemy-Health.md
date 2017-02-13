@@ -63,7 +63,7 @@ Let's modify our enemy health script (__You should know which one it is__).
 2. Add the following three lines below that:
 
 ```javascript
-var worldPos : Vector3 = Vector3(transform.position.x, transform.position.y + healthPanelOffset, transform.position.z);
+var worldPos : Vector3 = Vector3(transform.position.x, transform.position.y + healthPanelYPosition, transform.position.z);
 var screenPos : Vector3 = Camera.main.WorldToScreenPoint(worldPos);
 healthPanel.transform.position = Vector3(screenPos.x, screenPos.y, screenPos.z);
 ```
