@@ -26,7 +26,7 @@ Remember that we added the Enemy Health bars with the `Instantiate()` function? 
 - Add a varible at the top of the script:
   - it's **public**
   - the name should be `explosionPrefab`
-  - the type should be `Prefab`
+  - the type should be `GameObject`
 - Inside the `Shoot()` function, inside the `if statement`, add this line:
   - Instantiate (explosionPrefab, shootHit.point, Quaternion.identity);
 - Save the script and return to Unity
