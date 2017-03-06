@@ -64,6 +64,8 @@ In the `Update` function, make sure the content is as follows:
 
 You'll notice I left a comment in there. What __SHOULD__ happen when the player reaches zero health? (HINT: Maybe look around in this script?)
 
+__MAKE SURE TO DELETE THE COMMENT AND PUT YOUR COMMAND IN THAT LINE__
+
 ## STEP 6: Knock off some health
 
 In the `OnTriggerEnter` function, delete the lines and add the following:
@@ -75,6 +77,9 @@ In the `OnTriggerEnter` function, delete the lines and add the following:
 ```
 
 Again with the comments! Here, your health should go down, but by how much? You figure it out!
+
+
+__MAKE SURE TO DELETE THE COMMENT AND PUT YOUR COMMAND IN THAT LINE__
 
 ## STEP 7: Wire it all up
 
