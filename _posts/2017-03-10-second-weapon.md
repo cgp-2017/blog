@@ -51,9 +51,9 @@ Now we step into the code. Open up your `shoot` sript and add the following new 
 - Public variable called `damage2` that's of type `int` and initial value of 50.
 - Public variable called `cooldown2` that's of type `float` and initial value of 2.0.
 - Private variable called `currentWeapon` that's of type `int` and initial value of 1.
-- Private variable called `pew2` that's of type `AudioClip`.
-- Private variable called `gun1` that's of type `GameObject`.
-- Private variable called `gun2` that's of type `GameObject`.
+- Public variable called `pew2` that's of type `AudioClip`.
+- Public variable called `gun1` that's of type `GameObject`.
+- Public variable called `gun2` that's of type `GameObject`.
 
 ## STEP 7: Actual weapon switching
 
