@@ -25,6 +25,8 @@ Download a free sound for your gun. I went with a shotgun sound:
 
 http://soundbible.com/grab.php?id=2095&type=mp3
 
+Drag the sound file into your project in Unity.
+
 ## STEP 3: Place the gun on your player
 
 Open up your `FirstPersonCharacter` inside your `FPSController` and add the gun next to your other one:
