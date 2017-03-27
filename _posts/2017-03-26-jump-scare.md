@@ -9,9 +9,11 @@ published: true
 
 ## STEP 1: Scare wall and enemy
 
-Let's click on Create > Create Empty, make it a nice big wall that the player will collide with
+Let's click on Create > Create Empty
 
-Also add an enemy, move it slightly in front of the wall, so that it'll scare you!
+We will in the next step make it a nice big wall that the player will collide with
+
+Also add an enemy, move it slightly behind of the wall, so that it'll scare you!
 
 ## STEP 2: Components
 
@@ -19,6 +21,7 @@ Also add an enemy, move it slightly in front of the wall, so that it'll scare yo
 2. Rename it to "ScareWall"
 3. Add a Box Trigger and make it a trigger
 4. Add an Audio Source and disable "Play on Awake"
+5. Change the transform so that it's a big wall
 
 ## STEP 3: New Script
 
