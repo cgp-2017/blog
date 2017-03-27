@@ -19,7 +19,7 @@ Also add an enemy, move it slightly behind of the wall, so that it'll scare you!
 
 1. Click on the empty object and look at the inspector
 2. Rename it to "ScareWall"
-3. Add a Box Trigger and make it a trigger
+3. Click on "Add Component". Add a Box Collider and make it a trigger
 4. Add an Audio Source and disable "Play on Awake"
 5. Change the transform so that it's a big wall
 
