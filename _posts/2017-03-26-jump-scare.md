@@ -46,7 +46,7 @@ Finally, replace the `Update` function with the following:
 function OnTriggerEnter (other : Collider) {
 
 	if(other.tag == "THIS IS NOT CORRECT") {
-  		screamAudiob.PlayOneShot(sound);
+  		screamAudio.PlayOneShot(sound);
   		enemy.SetActive(true);
 	}
 }
